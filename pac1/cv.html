@@ -1,181 +1,212 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">  
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <title>Curriculum Vitae</title>
 </head>
+
 <body>
-    <!-- Menu -->
-    <div id="menu">
-        <div class="logo">
-            <a href="index.html" >
-                <img src="assets/img/home_white_24dp.svg" alt="logo">
-            </a>
+    <div id="container">
+        <!-- Menu -->
+        <div id="menu">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/home_white_24dp.svg" alt="logo">
+                </a>
+            </div>
+            <nav class="menuitems">
+                <ul>
+                    <li class="menuitem"><a href="index.html">Inici</a></li>
+                    <li class="menuitem active"><a href="cv.html">CV</span></a></li>
+                    <li class="menuitem"><a href="contacte.html">Contacte</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="menuitems">
-            <ul>
-                <li class="menuitem"><a href="index.html">Inici</a></li>
-                <li class="menuitem"><a href="cv.html">CV</span></a></li>
-                <li class="menuitem active"><a href="contacte.html">Contacte</a></li>
-            </ul> 
-        </div>  
-    </div>
-    <!-- End Menu -->
-    <div class="clearfix"></div>
-    <div class="sube"><a href="#menu"><img src="assets/img/subir.png" alt="subir" width="25" height="25"></a></div>
-
-    <div class="general">
-        <!-- Header -->
-        <header id="banner" class="cv">
-            <h1>Currículum Vitae</h1>
-        </header> 
-        <!-- Header -->
-        <div id="index">
-            <h2>Index</h2>
-            <ul class="indice">
-                <li><a href="#personales">Datos personales</a></li>
-                <li><a href="#perfil">Perfil Personal</a></li>
-                <li><a href="#profesional">Experiencia Profesional</a></li>
-                <li><a href="#estudios">Formación Académica</a></li>
-                <li><a href="#idiomas">Idiomas</a></li>
-                <li><a href="#otros">Otros datos de interés</a></li>
-            </ul>   
-        </div>
-
-        <section id="contenido">
-            <section class="secciones">
-                <h2  id="personales">Datos Personales</h2>
-                <picture class="careto">
-                    <img src="assets/img/foto_avatar.png" alt="foto avatar">
-                </picture>                
-                <div class="datos">
+        <!-- End Menu -->
+        <div class="sube"><a href="#menu"><img src="assets/img/subir.png" alt="subir" width="25" height="25"></a></div>
+        <!-- contenido -->
+        <div class="general">
+            <!-- Header -->
+            <header id="banner">
+                <h1>Curriculum Vitae</h1>
+                <img src="assets/img/home-banner4.jpg" alt="fondo">
+            </header>
+            <!-- End Header -->
+            <div id="desarrollo">
+                <section id="contenido">
+                    <section class="secciones">
+                        <h2 id="personales">Datos Personales</h2>
+                        <div class="ficha">
+                            <picture class="careto">
+                                <img src="assets/img/foto_avatar.png" alt="foto avatar">
+                            </picture>
+                            <div class="datos">
+                                <ul>
+                                    <li class="nombre">
+                                        EMILIO SÁNCHEZ
+                                    </li>
+                                    <li>
+                                        Edat: <strong>55</strong>
+                                    </li>
+                                    <li>
+                                        Nacionalidad: <strong>Española</strong>
+                                    </li>
+                                    <li>
+                                        Dirección: <strong>Cervantes, 33</strong>
+                                    </li>
+                                    <li>
+                                        CP: <strong>08221</strong> Ciudad: <strong>Terrassa</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="clearfix"></div>
+                    <section class="secciones">
+                        <h2 id="perfil">Perfil Personal</h2>
+                        <div>
+                            <p class="textos10">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolor iste fugit rerum in
+                                iure. Voluptates, laborum quam? Pariatur nostrum optio asperiores adipisci dolorem ullam
+                                quod delectus similique nulla obcaecati.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="secciones">
+                        <h2 id="profesional">Experiencia Profesional</h2>
+                        <div class="listadatos">
+                            <ul>
+                                <li>
+                                    <p>
+                                        <strong>Danone </strong><i>(1990 - 2000)</i><br>
+                                        Catador de producto<br>
+                                        Validar el sabor del producto
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Mcdonald </strong><i>(2000 - 2010)</i><br>
+                                        Responsable Catadores<br>
+                                        Supervisar a los catadores
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Mcdonald </strong><i>(2011 - actualidad)</i><br>
+                                        Ronald mcDonald<br>
+                                        Payaso
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="secciones">
+                        <h2 id="estudios">Formación Académica</h2>
+                        <div class="listadatos">
+                            <ul>
+                                <li>
+                                    <p>
+                                        <strong>Primaria</strong><br>
+                                        Escolas Pias
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Secundaria</strong><br>
+                                        Escolas Pias
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Vividor por cuenta ajena</strong><br>
+                                        Univesidad de barrio
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="secciones">
+                        <h2 id="idiomas">Idiomas</h2>
+                        <div>
+                            <table class="tidiomas">
+                                <thead>
+                                    <th>Idioma</th>
+                                    <th>Bajo</th>
+                                    <th>Medio</th>
+                                    <th>Alto</th>
+                                    <th>Nativo</th>
+                                </thead>
+                                <tr>
+                                    <td class="cab">Català</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="valor">X</td>
+                                </tr>
+                                <tr>
+                                    <td class="cab">Castellano</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="valor">X</td>
+                                </tr>
+                                <tr>
+                                    <td class="cab">English</td>
+                                    <td class="valor">X</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="secciones">
+                        <h2 id="otros">Otros datos de interés</h2>
+                        <div>
+                            <p class="textos10">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolor iste fugit rerum in
+                                iure. Voluptates, laborum quam? Pariatur nostrum optio asperiores adipisci dolorem ullam
+                                quod delectus similique nulla obcaecati.
+                            </p>
+                        </div>
+                    </section>
+                </section>
+                <aside id="index">
+                    <h2>Index</h2>
                     <ul>
-                        <li class="nombre">
-                            EMILIO SÁNCHEZ 
-                        </li>
-                        <li>
-                            Edat: <strong>55</strong> 
-                        </li>
-                        <li>
-                            Nacionalidad: <strong>Española</strong>
-                        </li>                        
-                        <li>
-                            Dirección: <strong>Cervantes, 33</strong> 
-                        </li>
-                        <li>
-                            CP: <strong>08221</strong> Ciudad: <strong>Terrassa</strong>
-                        </li>
+                        <li><a href="#personales">Datos personales</a></li>
+                        <li><a href="#perfil">Perfil Personal</a></li>
+                        <li><a href="#profesional">Experiencia Profesional</a></li>
+                        <li><a href="#estudios">Formación Académica</a></li>
+                        <li><a href="#idiomas">Idiomas</a></li>
+                        <li><a href="#otros">Otros datos de interés</a></li>
                     </ul>
-                </div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- End Contenido -->
+        <!-- Footer -->
+
+        <footer id="peu">
+            <section class="xarxa">
+                <a href="https://www.twitter.com"><img src="assets/img/twitter.png" alt="twitter"></a>
             </section>
-            <div class="clearfix"></div>
-            <section class="secciones">
-                <h2 id="perfil">Perfil Personal</h2>
-                <div>
-                    <p class="textos10">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolor iste fugit rerum in iure. Voluptates, laborum quam? Pariatur nostrum optio asperiores adipisci dolorem ullam quod delectus similique nulla obcaecati.
-                    </p>
-                </div>
+            <section class="xarxa">
+                <a href="https://www.linkedin.com"><img src="assets/img/linkedin.png" alt="linkedin"></a>
             </section>
-            <section class="secciones">
-                <h2 id="profesional">Experiencia Profesional</h2>
-                <div class="listadatos">
-                    <ul >
-                        <li>
-                            <p>
-                               <strong>Danone </strong><i>(1990 - 2000)</i><br>
-                               Catador de producto<br>
-                               Validar el sabor del producto
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                               <strong>Mcdonald </strong><i>(2000 - 2010)</i><br>
-                               Responsable Catadores<br>
-                               Supervisar a los catadores
-                            </p>
-                        </li>               
-                        <li>
-                            <p>
-                               <strong>Mcdonald </strong><i>(2011 - actualidad)</i><br>
-                               Ronald mcDonald<br>
-                               Payaso
-                            </p>
-                        </li>               
-                    </ul>            
-                </div>
+            <section class="xarxa">
+                <a href="https://www.instagram.com"><img src="assets/img/instagram.png" alt="instagram"></a>
             </section>
-            <section class="secciones">
-                <h2 id="estudios">Formación Académica</h2>
-                <div class="listadatos">
-                    <ul >
-                        <li>
-                            <p>
-                               <strong>Primaria</strong><br>
-                               Escolas Pias
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                               <strong>Secundaria</strong><br>
-                               Escolas Pias
-                            </p>
-                        </li>                <li>
-                            <p>
-                               <strong>Vividor por cuenta ajena</strong><br>
-                               Univesidad de barrio
-                            </p>
-                        </li>                
-                    </ul>
-                </div>
-            </section>
-            <section class="secciones">
-                <h2 id="idiomas">Idiomas</h2>
-                <div>
-                    <table class="tidiomas">
-                        <thead>
-                            <th>Idioma</th>
-                            <th>Bajo</th>
-                            <th>Medio</th>
-                            <th>Alto</th>
-                            <th>Nativo</th>
-                        </thead>
-                        <tr>
-                            <td class="cab">Català</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="valor">X</td>
-                        </tr>
-                        <tr>
-                            <td class="cab">Castellano</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="valor">X</td>
-                        </tr>
-                        <tr>
-                            <td class="cab">English</td>
-                            <td class="valor">X</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>                
-                    </table>
-                </div>
-            </section>        
-            <section class="secciones">
-                <h2 id="otros">Otros datos de interés</h2>
-                <div>
-                    <p class="textos10">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolor iste fugit rerum in iure. Voluptates, laborum quam? Pariatur nostrum optio asperiores adipisci dolorem ullam quod delectus similique nulla obcaecati.
-                    </p>
-                </div>
-            </section>  
-        </section>
+        </footer>
+        <!-- End  Footer -->
+
     </div>
 </body>
+
 </html>

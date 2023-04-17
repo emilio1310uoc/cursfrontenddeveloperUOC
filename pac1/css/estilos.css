@@ -1,10 +1,9 @@
 
 /* FUENTES*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 html{
     scroll-behavior: smooth;
-    font-family: 'Arial Bold',Arial, "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-family: 'Montserrat', 'Arial Bold',Arial, "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     font-size: 15px;
     max-width: 1440px;
 }
@@ -17,44 +16,52 @@ html{
 }
 /*----------------------------------------------------------------*/
 /* Estilos comunes en todas las paginas*/
+#container{
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+}
 #general{
     width: 100%;
+    height: auto;
     margin: 0px auto;
-    text-align: center;
 }
 
 #banner{
-    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 100%;
     height: 300px;
     color:rgba(0, 0, 0, 0.9);
-    text-align: center;
+    align-items: center;
+    position: relative;
 }
 
 #banner h1{
-    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
     font-weight: bold;
     font-size: 40px;
     letter-spacing: 2px;
-    line-height: 700%;
 }
 
 .sube{
     position: fixed;
-    right: 20px;
-    bottom: 20px
-}
-.clearfix{
-    float: none;
-    clear: both;
+    right: 30%;
+    bottom: 70px;
 }
 .titulo{
-    display:block;
+    display:flexbox;
+    width: 100%;
+    height: 50px;
     font-size: 20px;
     text-align: center;
     font-weight: bold;
     letter-spacing: 0.02em;
     margin: 0px;
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 .textos10{
     text-align: left;
@@ -78,80 +85,89 @@ html{
 /*----------------------------------------------------------------*/
 /* Estilos del menu general sitio */
 #menu{
-    width: 100%;
-    height: 60px;
-    background-color:black ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 64px;
+    background-color: black ;
     color: white;
 }
 .logo {
-    float: left;
-    width: 30%;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    overflow: hidden;
+    flex-grow: 1;
+    flex-basis: 10%;
 }
 .logo img{
-    display: block;
-    float:left;
     width: 40px;    
     margin: 10px;
     padding-left: 20px;
 }
 .menuitems{
-    display: block;
-    float: right;
-    background: transparent;
+    height: 100%;
+    padding-right: 20px;
 }
+.menuitems > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+} 
 .menuitem {
-    display: inline-block;
-    margin: 0px 20px 0px 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
     font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 60px;
 } 
 .menuitem a{
-    display:block;
+    padding: 15px ;
     text-decoration: none;
     color:white;
 }
 .menuitem :hover{
-    background-color:rgb(64, 207, 193);
+    background-color:rgb(255, 255, 255);
     cursor:pointer;
-    color:rgb(247, 9, 247);
+    color:rgb(0, 0, 0);
 }
 .active{
     text-decoration: underline solid white;
 } 
+
 #saludo{
-    display:block;
-    width: 95%;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    flex-basis: 80%;
+    flex-grow: 1;
+    align-items: center;
     margin: 15px;
 }
 #saludo p{
-    width: 60% ;
+    flex-basis: 50%;
+    align-items: center;
 }
 #saludo img{
-    display:inline-block;
-    width: 33% ;
+    flex-basis: 40%;
+    padding-top: 15px ;
 }
 /*----------------------------------------------------------------*/
 /* Estilos del peu general sitio */
 #peu{
-    width: 100%;
-    height: 45px;
-    background-color:black ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 64px;
+    background-color: black ;
     color: white;
-    padding-left: 35%;
-    padding-top: 5px;
+    justify-content: center;
+    width: 100%;
 }
 .xarxa{
-    display: inline-block;
     padding-left: 5%;
 }
 .xarxa a img{
-    display: inline-block;
     z-index: 9;
     width: 35px;
     height: 35px;
@@ -159,24 +175,25 @@ html{
 }
 /*----------------------------------------------------------------*/
 /* Estilos pagina index */
-.index{
-    background-image: url(../assets/img/home-banner3.jpg) ;
-}
+
 #projectes{
-    display:block;
-    width: 95%;
+    display:inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    flex-basis: 80%;
+    flex-grow: 1;
+    align-items: center;
     margin: 15px;
+    padding-bottom: 40px;
 
 }
 #projectes .projecte{
-    display:inline-block;
-    width: 33%;
-    vertical-align: top; 
-    max-width: 340px;
+    flex-basis: 340px;
     margin: 15px;
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
+    
 }
 .projecte button{
     padding: 10px 20px;
@@ -191,63 +208,88 @@ html{
     background-color: #ececec;
 }
 #experiencia{
-    display:block;
-    width: 100%;
-    border: 1px solid black; 
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    flex-basis: 100%;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
     background: black;
+    height: fit-content;
 }
 #experiencia h3{
     color: white;
-    margin-top: 80px;
 }
 #experiencia .llenguatge{
-    display:inline-block;
-    max-width: 10%;
-    margin: 20px;
-    text-align: center;
-    padding-left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-.llenguatge img{
-    text-align: center;
-    margin-top: 20px;
-    width: 150px;
+.round {
+    transform: rotate(-90deg);
+    /* transition: all 1s ease-in-out; */
+    /* SVG */
+    fill: none;
+    stroke-width: 7;
+    stroke-linecap: round;
 }
+.percentage {
+    position: absolute;
+    margin: auto;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
 #aficions{
-    display:block;
-    width: 95%;
-    margin: 15px;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    flex-basis: 80%;
+    flex-grow: 1;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 #aficions .aficio{
-    display: inline-block;
-    width: 25%;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    flex-basis: 340px;
     height: 65px;
-    margin: 12px;
+    margin: 20px;
+    border-radius: 5px ;
     background: rgb(176, 176, 176);
-    padding-left: 3%; 
+    font-size: 13px;
     line-height: 70px;
 }
 .aficio img{
-    display: inline-block;
-    padding-left: 10%;
-    vertical-align: middle; 
+    padding-left: 10;
+    height: 32px;
+    width: 32px; 
+    padding-top: 18px;
+}
+.rotado{
+    transform: rotate(-270deg);
+    padding-bottom: 15px;
 }
 
 /*----------------------------------------------------------------*/
 /* estilos pagina contato */
-.contacte{
-    background: url(../assets/img/home-banner2.jpg) no-repeat;
+#formulario{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 }
-.formcontacto{
-    display:block;
-    width: 60%;
-    padding-left: 15%;
-    float: left;
-    padding-bottom: 100px;
-}
+
 .form-bl{
-    display:block;
-    position: relative;
-    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 60%;
 }
 .form-label {
 	display: block;
@@ -261,7 +303,6 @@ html{
 }
 .form-input{
 	display: block;
-	width: 100%;
 	padding: 11px 21px;
 	font-size: 14px;
 	font-weight: 400;
@@ -277,28 +318,35 @@ textarea.form-input {
 	max-height: 204px;
 	resize: vertical;
 }
+.form-bl-li{
+    display: inline-flex;
+    flex-direction: row;
+    width: 60%;
+    height: auto;
+    margin-bottom: 5px;    
+}
 .form-checkbox{
-	display: inline-block;
 	width: 16px;
 	height: 16px;
     margin: 5px;
 	clip: rect(0, 0, 0, 0);
 	border: 0;
     cursor:pointer;
-}
-.linea{
-    display: inline-block;
-    line-height: 0px;
-    top: 10px;
+    margin-top: 20px;
 }
 .linea a{
     text-decoration: underline;
 }
+.form-bl-bt{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 5px;    
+}
 .form-button{
     padding: 10px 20px;
     margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 50%;
     font-size: 12px;
     line-height: 1.25;
     border: 1 solid;
@@ -311,35 +359,49 @@ textarea.form-input {
 
 /*----------------------------------------------------------------*/
 /* Estilos pagina cv */
-.cv{
-    background: url(../assets/img/home-banner4.jpg) no-repeat;
+#desarrollo{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#contenido{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    flex-basis: 70%;
 }
 #index{
-    display:block;
+    flex-basis: 10%;
+    padding-left: 20px;
+    padding-bottom: 50px;    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     position: fixed;
     top: 52%;
     left: 70%;
-    width: 15%;
-    margin: 20px;
-    padding-left: 20px;
-    float: left;
 }
-.indice li {
-    display:block;
+#index h2{
+
+    text-align: center;
+}
+#index ul{
+    list-style: none;
+}
+#index ul li {
+    font-size: 12px;
     padding: 10px;
     color:rgb(48, 62, 104);
     text-decoration: none;
     border-top: 1px solid rgb(48, 62, 104);
 }
-#contenido{
-    display:block;
-    width: 70%;
-    float: left;
-    padding-left: 20px;
-}
+
 #contenido .secciones{
-    display: block;
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex-wrap: wrap;
     margin: 20px;
     padding-bottom: 5px;
     
@@ -347,6 +409,12 @@ textarea.form-input {
 .secciones h2{
     padding-bottom: 5px;
     border-bottom: 3px solid black;
+}
+.ficha{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5px;
 }
 .careto{
     float: left;
@@ -358,7 +426,7 @@ textarea.form-input {
     margin: 10px;
     float: left;
     padding-top: 20px;
-    /* margin-top: 40px; */
+    
 }
 .datos ul li{
     display: block;
@@ -374,7 +442,6 @@ textarea.form-input {
 }
 .listadatos ul{
     padding-top: 15px;
-    /* padding-left: 15px; */
     padding-bottom: 5px;
     display:block;
 }
@@ -383,12 +450,6 @@ textarea.form-input {
     padding-left: 15px;
     padding-bottom: 5px;
     display:block;
-}
-#footer{
-    width: 100%;
-    background: rgb(10, 132, 154);
-    padding: 20px;
-    color: white;
 }
 .tidiomas{
     margin-left: 20px;
