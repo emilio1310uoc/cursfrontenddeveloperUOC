@@ -5,41 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <title>Contacto</title>
 </head>
 
 <body>
-    <div id="container">
-        <!-- Menu -->
-        <div id="menu">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/img/home_white_24dp.svg" alt="logo">
-                </a>
-            </div>
-            <nav class="menuitems">
-                <ul>
-                    <li class="menuitem"><a href="index.html">Inici</a></li>
-                    <li class="menuitem"><a href="cv.html">CV</span></a></li>
-                    <li class="menuitem active"><a href="contacte.html">Contacte</a></li>
-                </ul>
-            </nav>
+    <div id="generico">
+        <div id="logo">
+            <img src="assets/img/home_white_24dp.svg" alt="logo">
         </div>
-        <!-- End Menu -->
-        <!-- contenido -->
-        <div class="general">
-            <!-- Header -->
-            <header id="banner">
-                <h1>Contacte</h1>
-                <img src="assets/img/home-banner2.jpg" alt="fondo">
-            </header>
-            <!-- End Header -->
-            <div id="saludo">
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Inici</a></li>
+                <li><a href="cv.html">CV</span></a></li>
+                <li class="active"><a href="contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
+        <div id="cabecera">
+            <h1>Contacte</h1>
+            <picture>
+                <source srcset="assets/img/home-banner4.jpg" media="(min-width: 1200px)" />
+                <source srcset="assets/img/home-banner4_1200.jpg" media="(min-width: 600px)" />
+                <img src="assets/img/home-banner4_600.jpg" />
+            </picture>
+        </div>
+        <section id="principal">
+            <article id="saludo">
                 <h3 class="titulo">Parlem!</h3>
-            </div>
-            <div id="formcontacto">
+            </article>
+            <article class="formcontacto">
                 <form id="formulario" method="post" action="index.html">
                     <div class="form-bl">
                         <label class="form-label" for="nom">Nom</label>
@@ -63,24 +57,15 @@
                         <button class="form-button" type="submit">Enviar</button>
                     </div>
                 </form>
-            </div>
-        </div>
-        <!-- End Contenido -->
-        <!-- Footer -->
-
+            </article>
+        </section>
         <footer id="peu">
-            <section class="xarxa">
-                <a href="https://www.twitter.com"><img src="assets/img/twitter.png" alt="twitter"></a>
-            </section>
-            <section class="xarxa">
-                <a href="https://www.linkedin.com"><img src="assets/img/linkedin.png" alt="linkedin"></a>
-            </section>
-            <section class="xarxa">
-                <a href="https://www.instagram.com"><img src="assets/img/instagram.png" alt="instagram"></a>
-            </section>
+            <ul>
+                <li><a href="https://www.twitter.com"><img src="assets/img/twitter.png" alt="twitter"></a></li>
+                <li><a href="https://www.linkedin.com"><img src="assets/img/linkedin.png" alt="linkedin"></a></li>
+                <li><a href="https://www.instagram.com"><img src="assets/img/instagram.png" alt="instagram"></a></li>
+            </ul>
         </footer>
-        <!-- End  Footer -->
-
     </div>
 
 </body>

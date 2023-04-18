@@ -1,67 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* FUENTES*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 html{
     scroll-behavior: smooth;
-    font-family: 'Montserrat', 'Arial Bold',Arial, "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-family: 'Arial Bold',Arial, "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     font-size: 15px;
     max-width: 1440px;
-}
-
-*{
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
 
 }
 /*----------------------------------------------------------------*/
-/* Estilos comunes en todas las paginas*/
-#container{
-    width: 100%;
-    height: auto;
-    margin: 0px auto;
-}
-#general{
-    width: 100%;
-    height: auto;
-    margin: 0px auto;
+/* Estilos del menu general sitio */
+
+#generico{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 4rem, 1fr, 1fr, 3rem;
+    grid-template-areas: 
+        "logo logo mnu mnu mnu"
+        "cabecera cabecera cabecera cabecera cabecera"
+        "principal principal principal principal principal"
+        "peu peu peu peu peu"
+    ;
+    width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-#banner{
+#logo{
+    grid-area: logo;
     display: flex;
-    flex-flow: row wrap;
-    flex-basis: 100%;
-    height: 300px;
-    color:rgba(0, 0, 0, 0.9);
     align-items: center;
+    background-color:black ;
+    color: white;
+    padding-left: 2rem;
+}
+
+#menu{
+    grid-area: mnu;
+    overflow: hidden;
+    background-color:black ;
+    color: white;
+    display: flex;
+    justify-content: end;
+    padding-right: 2rem;
+}
+#menu ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    width: 65vw;
+}
+#menu li{
+    display: flex;
+    justify-content: center;
+}
+#menu li a {
+    text-decoration: none;
+}
+#menu li a:hover {
+    color: #ff9100; 
+}
+#menu li a:visited {
+    color: #ffffff; 
+}
+#menu li a:link {
+    color: #ffffff; 
+}
+.active{
+    text-decoration:underline;
+}
+
+#cabecera{
+    grid-area: cabecera;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgba(0, 0, 0, 0.9);
+    height: auto;
+}
+#cabecera h1 {
+  position: absolute;
+  font-weight: bold;
+  font-size: 35px;
+  letter-spacing: 1.5px;
+}
+#cabecera img,
+#cabecera picture {
+  width: 100vw;
 }
 
-#banner h1{
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
-    letter-spacing: 2px;
+#peu{
+    grid-area: peu;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:black ;
+    color: white;
+    border: 1px solid white;
+}
+#peu ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 20vw;
+} 
+#peu li{
+    list-style: none;
+}
+#peu li a img{
+    width: 35px;
+    height: 35px;
 }
 
-.sube{
-    position: fixed;
-    right: 30%;
-    bottom: 70px;
-}
 .titulo{
-    display:flexbox;
-    width: 100%;
-    height: 50px;
+    display:block;
     font-size: 20px;
     text-align: center;
     font-weight: bold;
     letter-spacing: 0.02em;
     margin: 0px;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;    
+    width: 100vw;
 }
 .textos10{
     text-align: left;
@@ -72,130 +131,69 @@ html{
     display:inline-block;
     vertical-align: top;    
     font-size: 12px;
-    margin: 15px;
     text-align: left;
     color:rgb(0, 0, 0); 
 }
 .br-alto{
     content: "";
-    margin: 20px;
     display: block;
     font-size: 24%;    
 }
-/*----------------------------------------------------------------*/
-/* Estilos del menu general sitio */
-#menu{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 64px;
-    background-color: black ;
-    color: white;
-}
-.logo {
-    flex-grow: 1;
-    flex-basis: 10%;
-}
-.logo img{
-    width: 40px;    
-    margin: 10px;
-    padding-left: 20px;
-}
-.menuitems{
-    height: 100%;
-    padding-right: 20px;
-}
-.menuitems > ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-} 
-.menuitem {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    font-size: 16px;
-} 
-.menuitem a{
-    padding: 15px ;
-    text-decoration: none;
-    color:white;
-}
-.menuitem :hover{
-    background-color:rgb(255, 255, 255);
-    cursor:pointer;
-    color:rgb(0, 0, 0);
-}
-.active{
-    text-decoration: underline solid white;
-} 
-
-#saludo{
-    display:flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    flex-basis: 80%;
-    flex-grow: 1;
-    align-items: center;
-    margin: 15px;
-}
-#saludo p{
-    flex-basis: 50%;
-    align-items: center;
-}
-#saludo img{
-    flex-basis: 40%;
-    padding-top: 15px ;
-}
-/*----------------------------------------------------------------*/
-/* Estilos del peu general sitio */
-#peu{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 64px;
-    background-color: black ;
-    color: white;
-    justify-content: center;
-    width: 100%;
-}
-.xarxa{
-    padding-left: 5%;
-}
-.xarxa a img{
-    z-index: 9;
-    width: 35px;
-    height: 35px;
-    
+.sube{
+    position: fixed;
+    right: 25vw;
+    bottom: 80px;
 }
 /*----------------------------------------------------------------*/
 /* Estilos pagina index */
+#principal{
+    grid-area: principal;
+    display:flex;
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;    
+}
+
+/* #principal #saludo{ */
+#saludo{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#saludo p{
+    padding-right: 2rem;
+    width: 50vw ;
+}
 
 #projectes{
-    display:inline-flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    flex-basis: 80%;
-    flex-grow: 1;
-    align-items: center;
-    margin: 15px;
-    padding-bottom: 40px;
-
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: 15px auto;
+    gap: 1rem;    
 }
 #projectes .projecte{
-    flex-basis: 340px;
-    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;    
+    flex-basis: 25vw;
+    overflow: hidden;
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
-    
+}
+.projecte p{
+    padding: 1rem;
 }
 .projecte button{
+    margin: 10px;
     padding: 10px 20px;
     margin-bottom: 10px;
     font-size: 12px;
@@ -207,6 +205,7 @@ html{
     cursor: pointer;
     background-color: #ececec;
 }
+
 #experiencia{
     display: flex;
     justify-content: space-evenly;
@@ -364,14 +363,16 @@ textarea.form-input {
     flex-direction: row;
     flex-wrap: wrap;
 }
-#contenido{
+#curriculum{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 20px;
     flex-basis: 70%;
 }
+
 #index{
+    grid-area: index;
     flex-basis: 10%;
     padding-left: 20px;
     padding-bottom: 50px;    
@@ -379,11 +380,11 @@ textarea.form-input {
     flex-direction: column;
     flex-wrap: wrap;
     position: fixed;
-    top: 52%;
-    left: 70%;
+    top: 55vw;
+    left: 60vw;
 }
-#index h2{
 
+#index h2{
     text-align: center;
 }
 #index ul{
@@ -397,7 +398,16 @@ textarea.form-input {
     border-top: 1px solid rgb(48, 62, 104);
 }
 
-#contenido .secciones{
+#curriculum{
+    grid-area: curriculum;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    flex-basis: 70%;
+}
+#curriculum .secciones{
+    
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
@@ -476,4 +486,77 @@ textarea.form-input {
     text-align: left;
     font-weight: bold;
     color:white; 
+}
+@media (max-width: 400px) { 
+    #index{
+        display: none;
+    }
+    .sube{
+        position: fixed;
+        right: 5vw;
+        bottom: 90px;
+    }
+    #experiencia .llenguatge{
+        width: 200px;
+    }         
+}
+
+@media (min-width: 400px) { 
+    #index{
+        top: 75vw;
+        left: 60vw;
+    }
+    .sube{
+        position: fixed;
+        right: 5vw;
+        bottom: 80px;
+    } 
+    #experiencia .llenguatge{
+        width: 200px;
+    }  
+}
+
+@media (min-width: 600px) { 
+    #index{
+        top: 30vw;
+        left: 60vw;
+    }
+    .sube{
+        position: fixed;
+        right: 5vw;
+        bottom: 80px;
+    }
+    #experiencia .llenguatge{
+        width: 150px;
+    }  
+}
+
+@media (min-width: 768px) { 
+    #index{
+        top: 28vw;
+        left: 65vw;
+    }
+    #experiencia .llenguatge{
+        width: 200px;
+    }    
+}
+
+@media (min-width: 992px) { 
+    #index{
+        top: 28vw;
+        left: 70vw;
+    }
+    #experiencia .llenguatge{
+        width: 250px;
+    }    
+}
+
+@media (min-width: 1200px) { 
+    #index{
+        top: 28vw;
+        left: 70vw;
+    }
+    #experiencia .llenguatge{
+        width: 300px;
+    }    
 }

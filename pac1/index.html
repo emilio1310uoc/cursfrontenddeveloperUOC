@@ -5,39 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <title>Portfoli</title>
 </head>
 
 <body>
-    <div id="container">
-        <!-- Menu -->
-        <div id="menu">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/img/home_white_24dp.svg" alt="logo">
-                </a>
-            </div>
-            <nav class="menuitems">
-                <ul>
-                    <li class="menuitem active"><a href="index.html">Inici</a></li>
-                    <li class="menuitem"><a href="cv.html">CV</span></a></li>
-                    <li class="menuitem"><a href="contacte.html">Contacte</a></li>
-                </ul>
-            </nav>
+    <div id="generico">
+        <div id="logo">
+            <img src="assets/img/home_white_24dp.svg" alt="logo">
         </div>
-        <!-- End Menu -->
-        <!-- contenido -->
-        <div class="general">
-            <!-- Header -->
-            <header id="banner">
-                <h1>El meu portafoli</h1>
-                <img src="assets/img/home-banner3.jpg" alt="fondo">
-
-            </header>
-            <!-- End Header -->
-            <div id="saludo">
+        <nav id="menu">
+            <ul>
+                <li class="active"><a href="index.html">Inici</a></li>
+                <li><a href="cv.html">CV</span></a></li>
+                <li><a href="contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
+        <div id="cabecera">
+            <h1>El meu portafoli</h1>
+            <picture>
+                <source srcset="assets/img/home-banner3.jpg" media="(min-width: 1200px)" />
+                <source srcset="assets/img/home-banner3_1200.jpg" media="(min-width: 600px)" />
+                <img src="assets/img/home-banner3_600.jpg" />
+            </picture>
+        </div>
+        <section id="principal">
+            <article id="saludo">
                 <h3 class="titulo">Hola!</h3>
                 <p class="textos15">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore exercitationem
                     ipsam consequatur. Tenetur quaerat vel ut veritatis ipsam, at quam magnam hic aliquid
@@ -54,11 +47,11 @@
                     cupiditate perspiciatis aut, impedit adipisci explicabo maxime laboriosam sunt quia? Amet, at?
                 </p>
                 <img src="assets/img/foto1.png" alt="fondobanner">
-            </div>
-            <section id="projectes">
+            </article>
+            <article id="projectes">
                 <h3 class="titulo">Els meus projectes</h3>
                 <div class="projecte">
-                    <img src="assets/img/pr1.png" width="100%" alt="projecte 1">
+                    <img src="assets/img/pr1.png" alt="projecte 1">
                     <p class="textos15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore nobis
                         repudiandae reiciendis cupiditate optio itaque sed minus veritatis ad natus perferendis
                         aspernatur voluptatem, excepturi suscipit eveniet. Sit qui et veritatis cum quam quia cupiditate
@@ -84,8 +77,8 @@
                         harum quas neque corrupti.</p>
                     <button>Llegir més</button>
                 </div>
-            </section>
-            <section id="experiencia">
+            </article>
+            <article id="experiencia">
                 <h3 class="titulo">Experiència</h3>
                 <div class="llenguatge">
                     <svg class="round" viewbox="0 0 100 100" width="200" height="200" data-percent="90" stroke="orange"
@@ -108,52 +101,48 @@
                     </svg>
                     <p class="percentage">JS</p>
                 </div>
-            </section>
-            <section id="aficions">
+            </article>
+            <article id="aficions">
                 <h3 class="titulo">Les meves aficions</h3>
                 <div class="aficio">
                     Viatjar
-                    <img class="rotado" src="assets/img/flight_FILL0_wght400_GRAD0_opsz48.svg" alt="Viatjar">
+                    <img class="rotado" src="assets/img/flight_FILL0_wght400_GRAD0_opsz48.svg" alt="Viatjar" height="32"
+                        width="32">
                 </div>
                 <div class="aficio">
                     Llegir
-                    <img src="assets/img/import_contacts_FILL0_wght400_GRAD0_opsz48.svg" alt="llegir">
+                    <img src="assets/img/import_contacts_FILL0_wght400_GRAD0_opsz48.svg" alt="llegir" height="32"
+                        width="32">
                 </div>
                 <div class="aficio">
                     Fotografia
-                    <img src="assets/img/photo_camera_FILL0_wght400_GRAD0_opsz48.svg" alt="Fotografia">
+                    <img src="assets/img/photo_camera_FILL0_wght400_GRAD0_opsz48.svg" alt="Fotografia" height="32"
+                        width="32">
                 </div>
                 <div class="aficio">
                     Pixelart i dibuixar amb css
-                    <img src="assets/img/code_FILL0_wght400_GRAD0_opsz48.svg" alt="Pixelart i dibuixar amb css">
+                    <img src="assets/img/code_FILL0_wght400_GRAD0_opsz48.svg" alt="Pixelart i dibuixar amb css"
+                        height="32" width="32">
                 </div>
                 <div class="aficio">
                     Fer una cerveza en bona companyia
                     <img src="assets/img/sports_bar_FILL0_wght400_GRAD0_opsz48.svg"
-                        alt="Fer una cerveza en bona companyia">
+                        alt="Fer una cerveza en bona companyia" height="32" width="32">
                 </div>
                 <div class="aficio">
                     Mirar series
-                    <img src="assets/img/videocam_FILL0_wght400_GRAD0_opsz48.svg" alt="Mirar series">
+                    <img src="assets/img/videocam_FILL0_wght400_GRAD0_opsz48.svg" alt="Mirar series" height="32"
+                        width="32">
                 </div>
-            </section>
-        </div>
-        <!-- End Contenido -->
-        <!-- Footer -->
-
+            </article>
+        </section>
         <footer id="peu">
-            <section class="xarxa">
-                <a href="https://www.twitter.com"><img src="assets/img/twitter.png" alt="twitter"></a>
-            </section>
-            <section class="xarxa">
-                <a href="https://www.linkedin.com"><img src="assets/img/linkedin.png" alt="linkedin"></a>
-            </section>
-            <section class="xarxa">
-                <a href="https://www.instagram.com"><img src="assets/img/instagram.png" alt="instagram"></a>
-            </section>
+            <ul>
+                <li><a href="https://www.twitter.com"><img src="assets/img/twitter.png" alt="twitter"></a></li>
+                <li><a href="https://www.linkedin.com"><img src="assets/img/linkedin.png" alt="linkedin"></a></li>
+                <li><a href="https://www.instagram.com"><img src="assets/img/instagram.png" alt="instagram"></a></li>
+            </ul>
         </footer>
-        <!-- End  Footer -->
-
     </div>
 </body>
 

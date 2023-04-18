@@ -5,41 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <title>Curriculum Vitae</title>
 </head>
 
 <body>
-    <div id="container">
-        <!-- Menu -->
-        <div id="menu">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/img/home_white_24dp.svg" alt="logo">
-                </a>
-            </div>
-            <nav class="menuitems">
-                <ul>
-                    <li class="menuitem"><a href="index.html">Inici</a></li>
-                    <li class="menuitem active"><a href="cv.html">CV</span></a></li>
-                    <li class="menuitem"><a href="contacte.html">Contacte</a></li>
-                </ul>
-            </nav>
+    <div id="generico">
+
+        <div id="logo">
+            <img src="assets/img/home_white_24dp.svg" alt="logo">
         </div>
-        <!-- End Menu -->
+        <nav id="menu">
+            <ul>
+                <li class="active"><a href="index.html">Inici</a></li>
+                <li><a href="cv.html">CV</span></a></li>
+                <li><a href="contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
+
+        <div id="cabecera">
+            <h1>Currículum Vitae</h1>
+            <picture>
+                <source srcset="assets/img/home-banner2.jpg" media="(min-width: 1200px)" />
+                <source srcset="assets/img/home-banner2_1200.jpg" media="(min-width: 600px)" />
+                <img src="assets/img/home-banner2_600.jpg" />
+            </picture>
+        </div>
         <div class="sube"><a href="#menu"><img src="assets/img/subir.png" alt="subir" width="25" height="25"></a></div>
-        <!-- contenido -->
-        <div class="general">
-            <!-- Header -->
-            <header id="banner">
-                <h1>Curriculum Vitae</h1>
-                <img src="assets/img/home-banner4.jpg" alt="fondo">
-            </header>
-            <!-- End Header -->
+
+        <aside id="index">
+            <h2>Index</h2>
+            <ul>
+                <li><a href="#personales">Datos personales</a></li>
+                <li><a href="#perfil">Perfil Personal</a></li>
+                <li><a href="#profesional">Experiencia Profesional</a></li>
+                <li><a href="#estudios">Formación Académica</a></li>
+                <li><a href="#idiomas">Idiomas</a></li>
+                <li><a href="#otros">Otros datos de interés</a></li>
+            </ul>
+        </aside>
+
+        <section id="principal">
             <div id="desarrollo">
-                <section id="contenido">
-                    <section class="secciones">
+                <section id="curriculum">
+                    <article class="secciones">
                         <h2 id="personales">Datos Personales</h2>
                         <div class="ficha">
                             <picture class="careto">
@@ -65,9 +74,8 @@
                                 </ul>
                             </div>
                         </div>
-                    </section>
-                    <div class="clearfix"></div>
-                    <section class="secciones">
+                    </article>
+                    <article class="secciones">
                         <h2 id="perfil">Perfil Personal</h2>
                         <div>
                             <p class="textos10">
@@ -76,8 +84,8 @@
                                 quod delectus similique nulla obcaecati.
                             </p>
                         </div>
-                    </section>
-                    <section class="secciones">
+                    </article>
+                    <article class="secciones">
                         <h2 id="profesional">Experiencia Profesional</h2>
                         <div class="listadatos">
                             <ul>
@@ -104,8 +112,8 @@
                                 </li>
                             </ul>
                         </div>
-                    </section>
-                    <section class="secciones">
+                    </article>
+                    <article class="secciones">
                         <h2 id="estudios">Formación Académica</h2>
                         <div class="listadatos">
                             <ul>
@@ -129,8 +137,8 @@
                                 </li>
                             </ul>
                         </div>
-                    </section>
-                    <section class="secciones">
+                    </article>
+                    <article class="secciones">
                         <h2 id="idiomas">Idiomas</h2>
                         <div>
                             <table class="tidiomas">
@@ -164,8 +172,8 @@
                                 </tr>
                             </table>
                         </div>
-                    </section>
-                    <section class="secciones">
+                    </article>
+                    <article class="secciones">
                         <h2 id="otros">Otros datos de interés</h2>
                         <div>
                             <p class="textos10">
@@ -174,38 +182,17 @@
                                 quod delectus similique nulla obcaecati.
                             </p>
                         </div>
-                    </section>
+                    </article>
                 </section>
-                <aside id="index">
-                    <h2>Index</h2>
-                    <ul>
-                        <li><a href="#personales">Datos personales</a></li>
-                        <li><a href="#perfil">Perfil Personal</a></li>
-                        <li><a href="#profesional">Experiencia Profesional</a></li>
-                        <li><a href="#estudios">Formación Académica</a></li>
-                        <li><a href="#idiomas">Idiomas</a></li>
-                        <li><a href="#otros">Otros datos de interés</a></li>
-                    </ul>
-                </aside>
             </div>
-        </div>
-
-        <!-- End Contenido -->
-        <!-- Footer -->
-
+        </section>
         <footer id="peu">
-            <section class="xarxa">
-                <a href="https://www.twitter.com"><img src="assets/img/twitter.png" alt="twitter"></a>
-            </section>
-            <section class="xarxa">
-                <a href="https://www.linkedin.com"><img src="assets/img/linkedin.png" alt="linkedin"></a>
-            </section>
-            <section class="xarxa">
-                <a href="https://www.instagram.com"><img src="assets/img/instagram.png" alt="instagram"></a>
-            </section>
+            <ul>
+                <li><a href="https://www.twitter.com"><img src="assets/img/twitter.png" alt="twitter"></a></li>
+                <li><a href="https://www.linkedin.com"><img src="assets/img/linkedin.png" alt="linkedin"></a></li>
+                <li><a href="https://www.instagram.com"><img src="assets/img/instagram.png" alt="instagram"></a></li>
+            </ul>
         </footer>
-        <!-- End  Footer -->
-
     </div>
 </body>
 
