@@ -1,0 +1,80 @@
+
+.cabecera{
+    position: fixed;
+    display: flex;
+    align-items: center;    
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--cab-color);
+    z-index: 50;
+}
+
+.cabecera img{
+    margin-left: 1rem;
+}
+.cabecera .logo {
+    display: block;
+    margin: 0px;
+    margin-left: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 50vw;
+    margin: 0;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    -webkit-text-stroke: 1px var(--color-linea);
+    color: var(--color-fuente-pk);    
+}
+
+.cabecera .darkLight{
+    display: flex;
+    align-items: center;
+
+}
+
+.darkLight .dark-light{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    /* opacity: 0;
+    visibility: hidden; */
+}
+.show-dark-light{
+    opacity: 1;
+    visibility: visible;
+}
+.not_show-dark-light{
+    opacity: 0;
+    visibility: hidden;
+}
+.dark-light i{
+    position: absolute;
+    color: var(--color-fuente);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+
+

@@ -1,0 +1,53 @@
+
+.info-totals {
+  background-color: var(--cab-color);
+  position: fixed;
+  top: 75px;
+  left: 6rem;
+  bottom: 0;
+  width: 32%;
+  height: 100px;
+  display: inline-block;
+  overflow: auto;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 1);
+  border-radius: 1.3em;
+  border-color: var(--color-border);
+  border-width: 3px;
+  padding-left: 20px;
+  z-index:200;
+  opacity: 0;
+  transition: 0.5s ease;
+  visibility: hidden;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+.not_show {
+  opacity: 0;
+  visibility: hidden;
+}
+.close_modal_info_btn {
+  display: inline-block;
+  color: var(--cab-color);
+}
+.totals{
+  display: inline-block;
+}
+.totals p {
+  margin: 0px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--color-fuente);  
+}
+.totalsPks , .totalsDex {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--color-fuente-pk);  
+}
+
+@media (min-width: 600px) {
+  .info-totals {
+    height: 60px;
+  }
+}

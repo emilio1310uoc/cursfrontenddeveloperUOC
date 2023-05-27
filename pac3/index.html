@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos_cokies.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos_mode.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos_cabecera.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos_cards.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos_eines.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos_busquedas.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos_totals.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos_detalls.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript" defer src="assets/js/pokemons.js"></script>
+    <script type="text/javascript" defer src="assets/js/main.js"></script>
+    <title>POKEMON POKEDEX</title>
+</head>
+
+<body onload="checkPage()">
+    <template id="templatePks" class="template-pks">
+        <div class="card-pk" id="">
+            <div class="card_img">
+                <img class="pk_img" src="" />
+            </div>
+            <p class="pk_name"></p>
+            <span class="pk_id"></span>
+            <div class="opcions">
+                <a id="detall" href="">
+                    <img src="./assets/img/icons8-report-50.png" alt="detalls">
+                    <span class="tooltips">Detalls</span>
+                </a>
+                <a id="addPoke" href="">
+                    <img id="" class="imgGene" src="./assets/img/icons8-open-pokeball-48.png" alt="possar al pokedex">
+                    <span class="tooltips">Possar a la Pokedex</span>
+                </a>
+                <a id="delete" href="">
+                    <img src="./assets/img/icons8-delete-32.png" alt="Esborrar/subsituir">
+                    <span class="tooltips">Esborrar / subsituir</span>
+                </a>
+            </div>
+        </div>
+    </template>
+    <template id="templateDetall" class="template-detall">
+        <div class="card-detall" id="">
+
+            <div class="cont-detall">
+                <section class="nombre">
+                    <div>
+                        <p class="pk_id"></p>
+                        <p class="pk_name"></p>
+                    </div>
+                </section>
+                <section class="imagenes">
+                    <img class="pk_img" src="" />
+                    <img class="pk_img2" src="" />
+                </section>
+                <section class="tipus">
+
+                </section>
+                <section class="stats">
+
+                </section>
+                <section class="utilitats">
+                    <div class="opcions-d">
+                        <a id="tancar-detall" href="">
+                            <img src="./assets/img/icons8-cerrar-ventana.gif" alt="detalls">
+                            <span class="tooltips">Tancar detalls</span>
+                        </a>
+                        <a id="addPoke-d" href="">
+                            <img id="" class="imgDetall" src="./assets/img/icons8-open-pokeball-48.png" alt="possar al pokedex">
+                            <span class="tooltips">Possar a la Pokeball</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </template>
+    <template id="templateTipo" class="template-Tipo">
+        <p class="tipo" id=""></p>
+    </template>
+    <template id="templateStat" class="template-Stat">
+        <div class="etiquetasEs">
+            <label class="nomStat" for=""></label>
+            <label class="valueStat" for=""></label>
+        </div>
+        <progress class="fuerza" id="" max="150" value="">
+        </progress>
+    </template>
+
+    <div id="generico">
+        <section class="cabecera">
+            <img src="assets/img/icons8-pokeball-48.png" alt="logo" width="50" height="50">
+            <span class="logo">LA POKÉDEX</span>
+
+            <div class="darkLight">
+                Color de sistema
+                <label class="switch_system">
+                    <input type="checkbox" id="toggle-sys">
+                    <span class="slider round"></span>
+                </label>
+                <div class="dark-light">
+                    <i class='bx bx-sun sun'></i>
+                    <i class='bx bx-moon moon'></i>
+                </div>
+            </div>
+        </section>
+        <div id="contenedor">
+            <section class="eines">
+                <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value>
+                <label for="abrir-cerrar">&#9187; <span class="abrir">Eines</span><span
+                        class="cerrar">Tancar</span></label>
+                <div id="sidebar" class="sidebar">
+                    <h3>Eines</h3>
+                    <ul class="menu">
+                        <li>
+                            <button class="todo-btn btn" onclick="showLista('visitados')" title="Tots els visitats">
+                                <img src="./assets/img/icons8-all-64.png" alt="Tots els visitats">
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="barrejar-btn btn" onclick="barrejar()" title="10 nous Pokémons">
+                                <img src="./assets/img/Daco_4740279.png" alt="10 nous Pokémons">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="info-btn btn" id="informacio" title="Totals">
+                                <img src="./assets/img/icons8-informacion-64.png" alt="Totals">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pokeball-btn btn" onclick="showLista('pokedex')" title="Pokéball">
+                                <img src="./assets/img/icons8-open-pokeball-48.png" alt="Pokéball">
+                            </button>
+
+
+                        </li>
+                        <li>
+                            <button class="cercar-btn btn" id="cercar" title="Cercar" for="showForm"
+                                onclick="obrirCercar()">
+                                <img src="./assets/img/icons8-lupa-50.png" alt="Pokécards">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <section id="principal" class="pokemons_ale">
+
+            </section>
+
+        </div>
+
+        <footer class="peu">
+            <ul>
+                <li><a href="https://www.twitter.com"><img src="assets/img/twitter.png" alt="twitter"></a></li>
+                <li><a href="https://www.linkedin.com"><img src="assets/img/linkedin.png" alt="linkedin"></a></li>
+                <li><a href="https://www.instagram.com"><img src="assets/img/instagram.png" alt="instagram"></a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <section class="busquedas">
+        <div class="contenido_modal">
+            <div class="cabecera_modal">
+                <span>Cercar Pokémons</span>
+                <button class="close_modal_btn" onclick="tancarCercar()">
+                    <i class="bx bx-x bx-sm"></i>
+                </button>
+            </div>
+            <div class="form">
+                <form autocomplete="off" class="cercar-form" onsubmit="cercarPokemon('T'); return false">
+                    <fieldset>
+                        <legend>A on vols cercar:</legend>
+
+                        <div>
+                            <input type="radio" id="tots" name="donde" value="tots" checked>
+                            <label for="tots">A tots els Pokémons</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="visites" name="donde" value="visites">
+                            <label for="visites">Als Pokémons visitats</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="pokeball" name="donde" value="pokeball">
+                            <label for="pokeball">Als Pokémons de la PokéBall</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Que el seu nom...</legend>
+                        <div>
+                            <input type="radio" id="igual" name="como" value="igual" checked>
+                            <label for="inicii">igual a:</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="inicii" name="como" value="inicii" checked>
+                            <label for="inicii">Inicii amb:</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="contingui" name="como" value="contingui">
+                            <label for="contingui">Contingui:</label>
+                        </div>
+                    </fieldset>
+                    <div class="captura">
+                        <button class="enviar-btn btn" title="Buscar!" type="submit">
+                            <img src="./assets/img/icons8-enviar-30.png" alt="Cercar">
+                        </button>
+                        <input type="text" id="cercar-input" class="cercar-input" placeholder="Cercar per Nom">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-totals">
+        <p>Pokémons: <span class="totalsPks"></span>
+            A la Pokédex: <span class="totalsDex"></span>
+        </p>
+    </section>
+    <div id="contenidor_detalls" class="contenidor_detalls">
+
+    </div>
+    <div class="fondo-detalls" id="fondo-detalls"></div>
+    <div class="aviso-cookies" id="aviso-cookies">
+        <img class="galleta" src="./assets/img/cookie.svg" alt="Galleta">
+        <h3 class="titulo">Cookies</h3>
+        <p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
+        <button class="boton-ok" id="btn-aceptar-cookies">Acepto</button>
+        <button class="boton-ko" id="btn-denegar-cookies">Denego</button>
+    </div>
+    <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
+</body>
+
+</html>

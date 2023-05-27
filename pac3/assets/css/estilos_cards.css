@@ -1,0 +1,133 @@
+:root {
+  --color-cards: #4373f7;
+  --color-border: #a6c9d3;  
+  --color-sombra-cards:rgba(207, 212, 222, 1);
+}
+/*----------------------------------------------------------------*/
+.pokemons_ale {
+  grid-area: principal;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
+  width: 90vw;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+  z-index: 0;
+}
+.card-pk {
+  background: var(--color-cards);
+  margin: 10px;
+  margin-top: 40px;
+  width: 13rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  border: 4px solid var(--color-border);
+  box-shadow: 0 6px 10px var(--color-sombra-cards);
+  border-radius: 10px;
+  text-align: center;
+  color: var(--color-fuente);
+  transition: all 0.3s ease;
+  z-index:0;
+}
+.resaltar{
+  border-color: red;
+}
+
+.pk_img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 15;
+}
+.pk_img2 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 15;
+}
+.card-pk .pk_name {
+  display: inline-block;
+  margin: 0;
+  font-weight: 200;
+  font-size: 18px;
+  padding-right: 10px;
+}
+.card-pk .pk_id {
+  display: inline-block;
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 10px;
+  padding-left: 10px;
+}
+
+.pk_img:hover {
+  transform: scale(1.5, 1.5);
+}
+.pk_img2:hover {
+  transform: scale(1.5, 1.5);
+}
+
+.opcions:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: var(--color-sombra-cards);
+}
+.opcions a {
+  position: relative;
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+.opcions a:last-child {
+  margin-right: 0;
+}
+
+.opcions a img {
+  width: 24px;
+  fill: currentColor;
+}
+.tooltips {
+  background: #262626;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 0.5rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -90%);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.tooltips:after {
+  content: " ";
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent;
+  transform: translate(-50%, 100%);
+}
+
+.opcions a .tooltips:after {
+  border-top-color: #262626;
+}
+
+.opcions a:hover .tooltips {
+  opacity: 1;
+  transform: translate(-50%, -130%);
+}

@@ -1,0 +1,92 @@
+
+.busquedas {
+  background-color: var(--cab-color);
+  position: fixed;
+  top: 10rem;
+  left: -70rem;
+  bottom: 0;
+  max-width: 40%;
+  height: auto;
+  max-height: 60%;
+  display: grid;
+  overflow: auto;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 1);
+  border-radius: 0 1.3em 1.3em 0;
+  border-color: var(--color-border);
+  border-width: 3px;
+  z-index: 800;
+  opacity: 0;
+  transition: 0.5s ease;
+  visibility: "hidden";
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  left: 7rem;
+}
+
+.contenido_modal {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.6em;
+}
+.cabecera_modal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cabecera_modal span {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-fuente-pk);
+  text-transform: capitalize;
+  opacity: 0.88;
+}
+.close_modal_btn {
+  color: var(--cab-color);
+}
+
+/* input.showForm {
+  display: none;
+} */
+fieldset {
+  border: thin solid var(--color-fuente);
+  color: black;
+  background-color: var(--color-border);
+  border-width: 2px;
+  margin-bottom: 10px;
+}
+
+legend {
+  font-weight: bold;
+  float: left;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+.captura{
+  display: flex;
+}
+.cercar-input{
+  display: inline-block;
+  height: 40px;
+}
+.enviar-btn img {
+  width: 40px;
+  height: 40px;
+}
+/* .closeFormLabel,
+.sendForm {
+  position: absolute;
+  bottom: 1rem;
+  width: 40%;
+  margin: 0 5%;
+  right: 0;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  padding: 0.5rem;
+  background: inherit;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: var(--color-fondo) 0.5s ease, var(--color-border) 0.5s ease;
+} */

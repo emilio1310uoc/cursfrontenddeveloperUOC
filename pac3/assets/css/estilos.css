@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --color-fuente: rgb(228, 228, 228);
+  --color-fondo: #f8a760;
+
+  --cab-color: #204fcd;
+  --color-linea: #395da9;
+  --color-fuente-pk: #ffcb05;
+
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Arial Bold", Arial, "Roboto", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  max-width: 1440px;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-fuente);
+  height: 100vh;
+  margin: 0;
+}
+
+/*----------------------------------------------------------------*/
+/* Estilos del menu general sitio */
+
+#contenedor {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  
+  grid-template-areas:
+    "eines principal principal principal principal";
+  width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+/* Estilos PEU */
+.peu {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background: var(--cab-color);
+  color: var(--color-fuente);
+}
+.peu ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 20vw;
+  background: var(--cab-color);
+}
+.peu li {
+  list-style: none;
+}
+.peu li a img {
+  width: 35px;
+  height: 35px;
+}
+
+
+
+
+
+/*----------------------------------------------------------------*/
+/* MEDIAS */
+
+@media (max-width: 400px) {
+
+}
+
+@media (min-width: 400px) {
+}
+
+@media (min-width: 600px) {
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}

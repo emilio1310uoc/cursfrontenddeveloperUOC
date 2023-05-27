@@ -1,0 +1,119 @@
+/* Estilos EINES */
+.eines {
+  grid-area: eines;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  display: flex;
+  justify-content: left;
+  align-items: top;
+  padding: 10px;
+  background-color: var(--color-fondo);
+  color: var(--color-fuente);
+  width: 50px;
+  padding-left: 1rem;
+  z-index: 2;
+}
+.eines input#abrir-cerrar {
+  visibility: hidden;
+  position: fixed;
+  top: 70px;
+  z-index: 2;
+}
+
+.eines label[for="abrir-cerrar"] {
+  cursor: pointer;
+  padding: 5px;
+  background-color: var(--cab-color);
+  color: var(--color-fuente);
+  display: inline-block;
+  width: 100%;
+}
+
+
+.eines .cerrar {
+  display: none;
+}
+.eines #sidebar {
+  width: 0;
+}
+
+.eines input#abrir-cerrar:checked ~ #sidebar {
+  width: 100px;
+}
+
+.eines input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar {
+  display: inline;
+}
+
+.eines input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
+  display: none;
+}
+
+.eines .sidebar {
+  position: fixed;
+  width: 0;
+  top: 10rem;
+  left: 0;
+  z-index: 21;
+  background-color: var(--cab-color);
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding: 1rem 0;
+  box-sizing: border-box;
+}
+
+.eines .sidebar h3 {
+  display: block;
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  -webkit-text-stroke: 0.5px var(--color-linea);
+  color: var(--color-fuente-pk);
+  margin-bottom: 20px;
+}
+.eines .sidebar .boton-cerrar {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  display: block;
+  padding: 0;
+  line-height: 1.5rem;
+  margin: 0;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+}
+
+.eines .sidebar ul,
+.eines .sidebar li {
+  margin: 10px;
+  padding: 0;
+  list-style: none inside;
+}
+
+.eines .sidebar ul {
+  display: block;
+  width: 100%;
+}
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.barrejar-btn, .pokeball-btn, .cercar-btn, .info-btn, .todo-btn {
+  display: inline-block;
+}
+
+.pokeball-btn img, .info-btn img, .todo-btn img{
+  width: 48px;
+  height: 48px;
+}
+.barrejar-btn img, .cercar-btn img {
+  width: 42px;
+  height: 42px;
+}
+

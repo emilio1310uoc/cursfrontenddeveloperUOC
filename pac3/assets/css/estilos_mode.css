@@ -1,0 +1,78 @@
+
+body.dark{
+    --color-fondo: #18191A;
+    --cab-color: #88337a;
+    --color-fuente: #CCC;
+}
+
+
+.switch_system {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 22px;
+}
+
+.switch_system input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch_system .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch_system .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 2px;
+  background-color: rgb(228, 228, 228);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch_system input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.switch_system input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch_system input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: rgb(0, 255, 0);
+}
+
+
+.switch_system .slider.round {
+  border-radius: 34px;
+}
+
+.switch_system .slider.round:before {
+  border-radius: 50%;
+  
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo:  #18191A;
+    --cab-color: #433d42;
+    --color-fuente:rgb(228, 228, 228);
+  }
+}
